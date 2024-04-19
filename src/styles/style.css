@@ -11,10 +11,12 @@ img {
 }
 
 video {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
 }
 
 :root {
@@ -97,88 +99,57 @@ nav img {
   width: 100px;
 }
 
-#illu_container_1 {
-  position: absolute;
-  width: 30%;
-  aspect-ratio: 3/2;
-  top: 84%;
-  left: 15%;
+.block_container {
+  display: flex;
+  width: 70px; /* Bredden af din søjle */
+  height: 300px; /* Den maksimale højde af din søjle */
+  position: relative;
+  border: 2px solid var(---beige);
+  align-items: flex-start;
+  justify-content: center;
 }
 
-#illu_container_2 {
-  position: absolute;
-  width: 30%;
-  aspect-ratio: 3/9;
-  top: 45%;
-  left: 55%;
+.block_container img {
+  width: 60px;
+  padding-top: 0.4rem;
 }
 
-/* omridset af blok */
-#block_1 {
-  position: absolute;
-  /* background-image: url(../../public/svg/block.svg); */
-  background-size: cover;
+.block_1,
+.block_2 {
   width: 100%;
-  height: 100%;
-}
-
-#block_2 {
+  height: 0; /* Starter fra 0 højde */
+  background-color: var(---beige);
   position: absolute;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+  bottom: 0; /* Starter fra bunden af containeren */
+  animation: fill 4s linear infinite; /* Animerer fyldningen af søjlen */
 }
 
-/* indholdet af blok */
-#vand {
-  position: absolute;
-  background-image: url(../../public/svg/water.svg);
-  background-size: cover;
-  width: 100%;
-  height: 100%;
+.block_2 {
+  animation: fill_2 4s linear infinite; /* Animerer fyldningen af søjlen */
 }
 
-#forbrug {
-  position: absolute;
-  background-image: url(../../public/svg/forbrug.svg);
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-}
-
-.fill_1 {
-  animation-fill-mode: forwards;
-  animation: fill_1_kf 3s linear;
-  animation-iteration-count: infinite;
-}
-
-.fill_2 {
-  animation-fill-mode: forwards;
-  animation: fill_2_kf 3s linear;
-  animation-delay: 4s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes fill_1_kf {
+@keyframes fill {
   0% {
-    clip-path: inset(100% 0 0);
+    height: 0; /* Starter fra 0 højde */
   }
-
+  20% {
+    height: 60px; /* Fylder ca. 20% af søjlen */
+  }
   100% {
-    clip-path: inset(0 0 0);
+    height: 0; /* Når den er fyldt, går tilbage til 0 højde og starter igen */
   }
 }
-
-@keyframes fill_2_kf {
+@keyframes fill_2 {
   0% {
-    clip-path: inset(100% 0 0);
+    height: 0; /* Starter fra 0 højde */
   }
-
+  20% {
+    height: 200px; /* Fylder ca. 20% af søjlen */
+  }
   100% {
-    clip-path: inset(0 0 0);
+    height: 0; /* Når den er fyldt, går tilbage til 0 højde og starter igen */
   }
 }
-
 .article_5 {
   background-color: var(---beige);
   display: flex;
