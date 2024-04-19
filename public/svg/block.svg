@@ -1,3 +1,13 @@
-<svg width="223" height="505" viewBox="0 0 223 505" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M221.603 1.1051H0.768066V504.137H221.603V1.1051Z" stroke="black" stroke-miterlimit="10"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" width="228.87" height="434.97" viewBox="0 0 228.87 434.97">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #f0eeeb;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="20.76" y="19.11" width="191.86" height="400.26"/>
 </svg>
