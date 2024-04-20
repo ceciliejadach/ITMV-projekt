@@ -118,3 +118,47 @@ nav img {
   margin-top: 250px;
   margin-left: 80px;
 }
+
+.article_7 {
+  background-color: var(---beige);
+  height: 100vh;
+  padding: 3rem 2rem;
+}
+
+.article_7 img {
+  padding-top: 3rem;
+}
+
+.img_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 2rem;
+}
+
+.img_container :first-child {
+  width: 150px;
+  justify-self: end;
+}
+
+.img_container :last-child {
+  justify-self: center;
+  align-self: end;
+  width: 80px;
+}
+
+.article_8 {
+  background-color: var(---rose);
+  height: 50vh;
+  padding: 2rem;
+  color: var(---blue);
+}
+
+.article_9 {
+  height: 50vh;
+  padding: 2rem;
+  color: var(---blue);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
