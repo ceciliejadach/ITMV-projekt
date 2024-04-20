@@ -1,14 +1,28 @@
 ---
-const { title } = Astro.props;
+const { title, img, name } = Astro.props;
 ---
 
-<details>
-  <summary>{title}</summary>
-  <article>
-    <slot />
-  </article>
-</details>
+<div class="accordion_container">
+  <img src={img} alt={name} />
+  <details>
+    <summary>{title}</summary>
+    <article>
+      <slot />
+    </article>
+  </details>
+</div>
+
 <style>
+  .accordion_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .accordion_container img {
+    width: 200px;
+    padding-bottom: 1rem;
+  }
   details,
   summary {
     max-width: 300px;
@@ -16,16 +30,20 @@ const { title } = Astro.props;
   }
   summary {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
     list-style: none;
     margin-bottom: 0;
     padding: 0.5rem;
-    background-color: lightgray;
+    font-weight: 600;
+    /* background-color: lightgray; */
   }
   article {
-    background-color: #eee;
+    /* background-color: #eee; */
+    border: var(---white) solid 1px;
+    border-radius: 10px;
     padding: 0.5rem;
   }
   /* Arrow icon */
@@ -33,7 +51,7 @@ const { title } = Astro.props;
     content: "";
     width: 0;
     height: 0;
-    border-top: 0.5rem solid black;
+    border-top: 0.5rem solid;
     border-inline: 0.4rem solid transparent;
   }
   details[open] > summary::after {

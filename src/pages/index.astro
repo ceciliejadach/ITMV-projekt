@@ -3,6 +3,9 @@ import ParallaxSection from "../components/ParallaxSection.astro";
 import "../styles/style.css";
 import BlockAnimation from "../components/BlockAnimation.astro";
 import ClothesAnimation from "../components/ClothesAnimation.astro";
+import PortraitSection from "../components/PortraitSection.astro";
+import Accordion from "../components/Accordion.astro";
+import CTAButton from "../components/CTAButton.astro";
 ---
 
 <html lang="en">
@@ -74,7 +77,7 @@ import ClothesAnimation from "../components/ClothesAnimation.astro";
       </ParallaxSection>
       <ParallaxSection height="100vh">
         <article class="article_8">
-          <p>I Tråd Med Verden bidrager til at reducere tekstiloverforbruget gennem repair service</p>
+          <p>I Tråd Med Verden bidrager til at reducere tekstiloverforbruget gennem repair service.</p>
           <img src="../../public/svg/globus.svg" alt="globus" />
         </article>
       </ParallaxSection>
@@ -87,6 +90,74 @@ import ClothesAnimation from "../components/ClothesAnimation.astro";
       <ParallaxSection height="100vh" background="./imgs/farvet_stof_closeup.webp">
         <article class="article_9">
           <p>En service, hvor to syerske og en designer assistent kommer ud til din arbejdsplads og hjælper med reparation, tilpasning og upcycling af dine medarbejderstøj.</p>
+        </article>
+      </ParallaxSection>
+      <ParallaxSection height="100">
+        <article class="article_10">
+          <div class="grid_container">
+            <PortraitSection name="Olena, Syerske" img="../../public/imgs/olena_portrait.webp" />
+            <p>Vores team består af to syerske og en designassistent. De vil hjælpe jer med at forlænge levetiden på jeres tøj.</p>
+          </div>
+          <div class="grid_container">
+            <PortraitSection name="Ira, Syerske" img="../../public/imgs/ira_portrait.webp" />
+            <PortraitSection name="Luna, Designassistent" img="../../public/imgs/h_luna_portrait.webp" />
+          </div>
+        </article>
+      </ParallaxSection>
+      <ParallaxSection height="80">
+        <article class="article_11">
+          <h2>"Det er måske kun én krumme i en medarbejders pung, at købe et nyt stykke tøj, men vores service, kan være én krumme i en virksomheds budget og kan bidrage til meget mere en kun reparation af tøj."</h2>
+          <br />
+          <p>"Vi oplever at medarbejderne sætter stor pris på denne gave fra deres arbejdsplads og er med til at de føler sig værdsat af firmaet."</p>
+          <br />
+          <p><em>Luna, Designassistent</em></p>
+        </article>
+      </ParallaxSection>
+      <ParallaxSection background="./imgs/taeppe.webp" height="100">
+        <div class="wrapper">
+          <h1>Hvad får I ud af det?</h1>
+        </div>
+      </ParallaxSection>
+      <ParallaxSection height="180">
+        <article class="article_12">
+          <h1>Vi bidrager til ESG</h1>
+          <Accordion title="Hvordan kan ITMV hjælpe din virksomheds miljømæssige fodaftryk?" img="../../public/svg/envoirment.svg">
+            <h4>Here it is</h4>
+            <p>It's not quite like in HTML</p>
+            <p>But better</p>
+          </Accordion>
+          <Accordion title="Vidste du ITMV kan være med til at styrke din virksomheds sociale ansvar?" img="../../public/svg/social.svg">
+            <h4>Here it is</h4>
+            <p>It's not quite like in HTML</p>
+            <p>But better</p>
+          </Accordion>
+          <Accordion title="Sådan er din virksomhed med til at forbedre arbejdsforhold og samfundsengagementet" img="../../public/svg/govern.svg">
+            <h4>Here it is</h4>
+            <p>It's not quite like in HTML</p>
+            <p>But better</p>
+          </Accordion>
+        </article>
+      </ParallaxSection>
+      <ParallaxSection height="80">
+        <article class="article_13">
+          <div>
+            <h2>Hvad siger vores samarbejdspartnere?</h2>
+            <br />
+            <p>”Vi er vilde med konceptet med Repair Service, der på alle parametre taler direkte ind i vores arbejde med at sætte fokus på bæredygtige løsninger i et stort kontorhus.”</p>
+            <br />
+            <p><em>Sanne Kjær, Kundedirektør KAB</em></p>
+          </div>
+          <div>
+            <p>”Det er helt fantastisk, en af de bedste personalegoder jeg har oplevet i KAB. Jeg ville rigtig gerne reparerer mit tøj frem for at smide det ud, men problemet er at man skal finde en god skrædder og det kan være enormt dyrt.”</p>
+            <br />
+            <p><em>Jonas Mørch Cohen, Kundechef KAB</em></p>
+          </div>
+        </article>
+      </ParallaxSection>
+      <ParallaxSection height="80">
+        <article class="article_14">
+          <h1>Bliv en del af en lokal løsning på et globalt problem</h1>
+          <CTAButton />
         </article>
       </ParallaxSection>
     </main>

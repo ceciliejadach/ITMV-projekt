@@ -29,6 +29,10 @@ video {
 h1 {
   font-size: 3rem;
 }
+
+h2 {
+  line-height: 1.2;
+}
 p {
   line-height: 1.5;
 }
@@ -156,9 +160,75 @@ nav img {
 .article_9 {
   height: 50vh;
   padding: 2rem;
-  color: var(---blue);
+  color: var(---white);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.4rem;
+}
+
+.article_10 {
+  background-color: var(---beige);
+  padding: 1rem;
+  color: var(---blue);
+  height: 100vh;
+}
+.grid_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+
+.article_11 {
+  background-color: var(---beige);
+  padding: 1rem;
+  color: var(---blue);
+  height: 80vh;
+}
+
+.article_11 :last-child {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(---white);
+  text-align: center;
+}
+
+.article_12 {
+  background-color: var(---blue);
+  height: 180vh;
+  display: grid;
+  gap: 40px;
+  padding: 2rem;
+  color: var(---white);
+}
+
+.article_13 {
+  background-color: var(---blue);
+  height: 80vh;
+  gap: 40px;
+  padding: 2rem;
+  color: var(---white);
+}
+
+.article_13 div {
+  margin-bottom: 40px;
+}
+
+.article_13 div :last-child {
+  text-align: center;
+}
+
+.article_14 {
+  background-color: var(---beige);
+  color: var(---blue);
+  padding: 2rem;
+  height: 80vh;
 }
