@@ -1,6 +1,7 @@
 ---
 import ParallaxSection from "../components/ParallaxSection.astro";
 import "../styles/style.css";
+import BlockAnimation from "../components/BlockAnimation.astro";
 ---
 
 <html lang="en">
@@ -40,19 +41,10 @@ import "../styles/style.css";
           <h1>Vidste du...</h1>
         </article>
       </ParallaxSection>
-      <ParallaxSection height="100">
+      <ParallaxSection>
         <article class="article_4">
           <p>Dit årlige tekstilforbrug svarer til liter vand du drikker på 12 år.</p>
-          <div class="article_4_animation">
-            <div class="block_container">
-              <img src="../../public/svg/girl.svg" alt="girl" />
-              <div class="block_1"></div>
-            </div>
-            <div class="block_container">
-              <img src="../../public/svg/shirt.svg" alt="shirt" />
-              <div class="block_2"></div>
-            </div>
-          </div>
+          <BlockAnimation />
         </article>
       </ParallaxSection>
       <ParallaxSection>

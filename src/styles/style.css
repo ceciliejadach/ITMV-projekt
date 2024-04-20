@@ -80,76 +80,16 @@ nav img {
   display: flex;
   flex-direction: column;
   background-color: var(---blue);
-  height: 100vh;
+  /* height: 80vh; */
   position: relative;
   padding: 2rem;
   color: var(---white);
 }
 
-.article_4_animation {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding-top: 3rem;
-}
 .article_4 div {
   justify-self: center;
 }
 
-.article_4 img {
-  width: 100px;
-}
-
-.block_container {
-  display: flex;
-  width: 70px; /* Bredden af din søjle */
-  height: 300px; /* Den maksimale højde af din søjle */
-  position: relative;
-  border: 2px solid var(---beige);
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.block_container img {
-  width: 60px;
-  padding-top: 0.4rem;
-}
-
-.block_1,
-.block_2 {
-  width: 100%;
-  height: 0; /* Starter fra 0 højde */
-  background-color: var(---beige);
-  position: absolute;
-  bottom: 0; /* Starter fra bunden af containeren */
-  animation: fill 4s linear infinite; /* Animerer fyldningen af søjlen */
-}
-
-.block_2 {
-  animation: fill_2 4s linear infinite; /* Animerer fyldningen af søjlen */
-}
-
-@keyframes fill {
-  0% {
-    height: 0; /* Starter fra 0 højde */
-  }
-  20% {
-    height: 60px; /* Fylder ca. 20% af søjlen */
-  }
-  100% {
-    height: 0; /* Når den er fyldt, går tilbage til 0 højde og starter igen */
-  }
-}
-@keyframes fill_2 {
-  0% {
-    height: 0; /* Starter fra 0 højde */
-  }
-  20% {
-    height: 200px; /* Fylder ca. 20% af søjlen */
-  }
-  100% {
-    height: 0; /* Når den er fyldt, går tilbage til 0 højde og starter igen */
-  }
-}
 .article_5 {
   background-color: var(---beige);
   display: flex;

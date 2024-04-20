@@ -1,0 +1,70 @@
+<div class="article_4_animation">
+  <div class="block_container">
+    <img src="../../public/svg/girl.svg" alt="girl" />
+    <div class="block_1"></div>
+  </div>
+  <div class="block_container">
+    <img src="../../public/svg/shirt.svg" alt="shirt" />
+    <div class="block_2"></div>
+  </div>
+</div>
+
+<style>
+  .article_4_animation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 3rem;
+  }
+
+  .block_container {
+    display: flex;
+    width: 70px;
+    height: 300px;
+    position: relative;
+    border: 2px solid var(---beige);
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .block_container img {
+    width: 60px;
+    padding-top: 0.4rem;
+  }
+
+  .block_1,
+  .block_2 {
+    width: 100%;
+    height: 0;
+    background-color: var(---beige);
+    position: absolute;
+    bottom: 0;
+    animation: fill 4s linear infinite;
+  }
+
+  .block_2 {
+    animation: fill_2 4s linear infinite;
+  }
+
+  @keyframes fill {
+    0% {
+      height: 0;
+    }
+    20% {
+      height: 60px;
+    }
+    100% {
+      height: 0;
+    }
+  }
+  @keyframes fill_2 {
+    0% {
+      height: 0;
+    }
+    20% {
+      height: 200px;
+    }
+    100% {
+      height: 0;
+    }
+  }
+</style>
