@@ -1,10 +1,15 @@
 ---
-const { name, img } = Astro.props;
+const { name, img, job } = Astro.props;
 ---
 
 <div class="img">
   <img src={img} alt={name} />
   <p>{name}</p>
+  <p class="small_text"><em>{job}</em></p>
 </div>
 
-<style></style>
+<style>
+  .small_text {
+    font-size: 1rem;
+  }
+</style>
