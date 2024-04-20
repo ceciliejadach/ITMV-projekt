@@ -103,3 +103,18 @@ nav img {
 .article_5 :last-child {
   text-align: right;
 }
+
+.container {
+  height: 100vh;
+  background-color: var(---blue);
+}
+.container p {
+  color: var(---beige);
+  padding: 2rem;
+}
+
+.container img {
+  width: 250px;
+  margin-top: 250px;
+  margin-left: 80px;
+}

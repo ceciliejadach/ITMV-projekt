@@ -2,6 +2,7 @@
 import ParallaxSection from "../components/ParallaxSection.astro";
 import "../styles/style.css";
 import BlockAnimation from "../components/BlockAnimation.astro";
+import ClothesAnimation from "../components/ClothesAnimation.astro";
 ---
 
 <html lang="en">
@@ -54,7 +55,13 @@ import BlockAnimation from "../components/BlockAnimation.astro";
           <p>før det når butikshylderne.</p>
         </article>
       </ParallaxSection>
-      <ParallaxSection />
+      <ParallaxSection height="100">
+        <div class="container">
+          <p>Ca. 85% af tekstiler, der købes årligt, ender på lossepladserne.</p>
+          <ClothesAnimation />
+          <img src="../../public/svg/losseplads-2.svg" alt="losseplads" />
+        </div>
+      </ParallaxSection>
     </main>
   </body>
 </html>
