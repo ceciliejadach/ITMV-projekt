@@ -232,3 +232,17 @@ nav img {
   padding: 2rem;
   height: 80vh;
 }
+
+svg.redline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2850vw;
+  z-index: 10;
+}
+
+svg.redline path {
+  stroke-width: 0.5rem;
+  stroke: #e74d3c55;
+}
