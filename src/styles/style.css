@@ -313,7 +313,7 @@ nav img {
 
 .article_12 {
   background-color: var(---blue);
-  height: 180vh;
+  height: 150vh;
   display: grid;
   gap: 40px;
   padding: 2rem;
@@ -322,7 +322,7 @@ nav img {
 
 .article_13 {
   background-color: var(---blue);
-  height: 50vh;
+  height: 80vh;
   gap: 40px;
   padding: 2rem;
   color: var(---white);
@@ -341,7 +341,7 @@ svg.redline {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 2737vw;
+  height: 2684vw;
   z-index: 10;
 }
 
@@ -494,7 +494,6 @@ svg.redline path {
   .article_12 {
     height: 100vh;
   }
-
   .article_12 h1 {
     place-self: center;
   }
@@ -502,5 +501,12 @@ svg.redline path {
   .accordion_wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+    margin-top: 0;
+    justify-self: center;
+  }
+
+  .article_13 {
+    height: 100vh;
   }
 }
