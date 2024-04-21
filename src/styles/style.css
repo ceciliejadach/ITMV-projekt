@@ -124,6 +124,7 @@ nav img {
   display: grid;
   height: 100vh;
   background-color: var(---blue);
+  place-items: center;
 }
 .container p {
   color: var(---beige);
@@ -135,6 +136,81 @@ nav img {
   margin-top: 250px;
   margin-left: 80px;
 }
+
+/* -----CIRKELDIAGRAM----- */
+/* 
+.circular {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  transform: scale(2);
+}
+
+.circular .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: var(---blue);
+  border-radius: 100%;
+}
+
+.circular .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: var(---beige);
+}
+
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(---beige);
+  border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+
+.circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: var(---rose);
+}
+
+.circle .left .progress {
+  z-index: 1;
+  animation: left 4s linear both;
+}
+
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.circle .right {
+  z-index: 3;
+  transform: rotate(115deg);
+}
+
+.circle .right .progress {
+  animation: left 4s linear both;
+  animation-delay: 2.5s;
+}
+
+@keyframes right {
+  100% {
+    transform: rotate(180deg);
+  }
+} */
 
 /* -----SEKTION 7 - SYMASKINE ILLUSTRATION----- */
 

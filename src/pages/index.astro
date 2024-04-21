@@ -66,11 +66,23 @@ import Citat from "../components/Citat.astro";
       <ParallaxSection height="100">
         <div class="color1">
           <div class="container">
-            <div><p>Ca. 85% af tekstiler, der købes årligt, ender på lossepladserne.</p></div>
-            <div>
-              <ClothesAnimation />
-              <img src="../../public/svg/losseplads-2.svg" alt="losseplads" />
-            </div>
+            <p>Ca. 85% af tekstiler, der købes årligt, ender på lossepladserne.</p>
+            <!-- 
+              <div class="circular">
+                <div class="inner"></div>
+                <div class="number">0%</div>
+                <div class="circle">
+                  <div class="bar left">
+                    <div class="progress"></div>
+                  </div>
+                  <div class="bar right">
+                    <div class="progress"></div>
+                  </div>
+                </div>
+              </div> -->
+
+            <!-- <ClothesAnimation /> -->
+            <img src="../../public/svg/losseplads-2.svg" alt="losseplads" />
           </div>
         </div>
       </ParallaxSection>
@@ -120,7 +132,6 @@ import Citat from "../components/Citat.astro";
             <div class="grid_container">
               <p>Vores team består af to syerske og en designassistent. De vil hjælpe jer med at forlænge levetiden på jeres tøj.</p>
               <PortraitSection name="Olena" job="Syerske" img="../../public/imgs/olena_portrait.webp" />
-
               <PortraitSection name="Ira" job="Syerske" img="../../public/imgs/ira_portrait.webp" />
               <PortraitSection name="Luna" job="Designassistent" img="../../public/imgs/h_luna_portrait.webp" />
             </div>
@@ -211,4 +222,15 @@ import Citat from "../components/Citat.astro";
 
   scroll();
   window.addEventListener("scroll", scroll);
+
+  // const numb = document.querySelector(".number");
+  // let counter = 0;
+  // setInterval(() => {
+  //   if (counter == 85) {
+  //     clearInterval();
+  //   } else {
+  //     counter += 1;
+  //     numb.textContent = counter + "%";
+  //   }
+  // }, 75);
 </script>
