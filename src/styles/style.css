@@ -352,7 +352,7 @@ svg.redline path {
 
 @media (min-width: 800px) {
   svg.redline {
-    height: 795vw;
+    height: 815vw;
   }
 
   svg.redline path {
@@ -508,5 +508,11 @@ svg.redline path {
 
   .article_13 {
     height: 100vh;
+  }
+
+  .article_14 h1 {
+    text-align: center;
+    max-width: 800px;
+    margin: 100px auto;
   }
 }
