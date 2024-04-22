@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 img {
   width: 100%;
   display: block;
@@ -16,31 +20,49 @@ video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  /* position: fixed; */
   top: 0;
   left: 0;
+  z-index: 90;
 }
 
+/* Defineret farver */
 :root {
-  /* Farver */
   ---beige: #f0eeeb;
   ---blue: #3e5c6d;
   ---rose: #c3acb1;
   ---white: #ffffff;
 }
+
+/* Defineret fonte */
+:root {
+  --font-size-h1: 3rem;
+  --font-size-h2: 2rem;
+  --font-size-p: 1.2rem;
+  --line-height-h2: 1.2;
+  --line-height-p: 1.5;
+}
+
 h1 {
-  font-size: 3rem;
+  font-size: var(--font-size-h1);
 }
 
 h2 {
-  line-height: 1.2;
-}
-p {
-  line-height: 1.5;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
+p {
+  font-size: var(--font-size-p);
+  line-height: var(--line-height-p);
+}
+
+/* Desktop størrelse */
+@media (min-width: 800px) {
+  :root {
+    --font-size-h1: 4rem;
+    --font-size-h2: 1.5rem;
+    --font-size-p: 0.8rem;
+  }
 }
 
 /* -----SEKTION 1 - VIDEO----- */
@@ -54,6 +76,7 @@ body {
   position: absolute;
   color: var(---blue);
   padding: 20px;
+  z-index: 95;
 }
 
 nav {
@@ -67,8 +90,9 @@ nav img {
   width: 40px;
 }
 
-/* -----SEKTION 2 - ITMV INTRODUKTION----- */
-.article_2 {
+/* -----SEKTION 2 - ITMV INTRODUKTION og SEKTION 3 - VIDSTE DU----- */
+.article_2,
+.article_3 {
   width: 100%;
   height: 100%;
   color: var(---white);
@@ -77,15 +101,8 @@ nav img {
   padding: 2rem;
 }
 
-/* -----SEKTION 3 - VIDSTE DU----- */
-
 .article_3 {
-  width: 100%;
-  height: 100%;
-  color: var(---white);
-  display: flex;
-  padding-left: 3rem;
-  align-items: center;
+  padding: 3rem;
 }
 
 /* -----SEKTION 4 - BLOK ANIMATIONER - TEKSTIL FORBRUG----- */
@@ -94,7 +111,6 @@ nav img {
   display: flex;
   flex-direction: column;
   background-color: var(---blue);
-  /* height: 80vh; */
   position: relative;
   padding: 2rem;
   color: var(---white);
@@ -107,7 +123,6 @@ nav img {
 /* -----SEKTION 5 - SKRALDEPOSE ILLUSTRATION----- */
 
 .article_5 {
-  background-color: var(---beige);
   display: grid;
   height: 100vh;
   padding: 2rem;
@@ -123,7 +138,6 @@ nav img {
 .container {
   display: grid;
   height: 100vh;
-  background-color: var(---blue);
   place-items: center;
 }
 .container p {
@@ -245,21 +259,10 @@ nav img {
 
 /* -----SEKTION 8 - GLOBUS ILLUSTRATION----- */
 .article_8 {
-  display: flex;
-  flex-direction: column;
-  background-color: var(---rose);
+  display: grid;
+  width: 100%;
   height: 100vh;
   padding: 2rem;
-  color: var(---blue);
-}
-
-/* -----SEKTION 9 - TIDSLINJE ILLUSTRATION----- */
-.tidslinje {
-  height: 50vh;
-  background-color: var(---rose);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: var(---blue);
 }
 
@@ -273,7 +276,6 @@ nav img {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.4rem;
 }
 
 /* -----SEKTION 11 - FORKLARING AF REPAIR SERVICE----- */
@@ -293,10 +295,9 @@ nav img {
 
 /* section 11*/
 .article_11 {
-  background-color: var(---beige);
   padding: 1rem;
   color: var(---blue);
-  height: 210vh;
+  height: 170vh;
 }
 
 .article h2 {
@@ -304,10 +305,10 @@ nav img {
   padding-top: 40px;
   padding-bottom: 30px;
 }
-.weoffer_container {
+/* .weoffer_container {
   display: flex;
   justify-content: center;
-}
+} */
 .weoffer_container img {
   justify-content: center;
   align-items: center;
@@ -342,25 +343,30 @@ nav img {
 }
 
 .article_12 {
-  background-color: var(---blue);
-  height: 150vh;
+  height: 100vh;
   display: grid;
   gap: 40px;
   padding: 2rem;
   color: var(---white);
 }
 
+.accordion_wrapper {
+  display: grid;
+  gap: 50px;
+}
+
+.accordion_p {
+  font-size: 1rem;
+}
+
 .article_13 {
-  background-color: var(---blue);
-  height: 80vh;
-  gap: 40px;
+  height: 100vh;
   padding: 2rem;
   color: var(---white);
   text-align: center;
 }
 
 .article_14 {
-  background-color: var(---beige);
   color: var(---blue);
   padding: 2rem;
   height: 80vh;
@@ -371,7 +377,7 @@ svg.redline {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 2684vw;
+  height: 2560vw;
   z-index: 10;
 }
 
@@ -435,14 +441,6 @@ svg.redline path {
     font-size: 2rem;
   }
 
-  .color1 {
-    background-color: var(---blue);
-  }
-
-  .color3 {
-    background-color: var(---rose);
-  }
-
   .container {
     max-width: 1200px;
     margin: auto;
@@ -464,10 +462,6 @@ svg.redline path {
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     margin: auto;
-  }
-
-  .color2 {
-    background-color: var(---beige);
   }
 
   .article_7 img {
@@ -502,6 +496,12 @@ svg.redline path {
   .article_8 {
     max-width: 1200px;
     margin: auto;
+    gap: 50px;
+  }
+
+  .article_8 img {
+    max-width: 900px;
+    justify-self: center;
   }
 
   .article_8 p {
