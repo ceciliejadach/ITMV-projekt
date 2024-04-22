@@ -291,16 +291,46 @@ nav img {
   padding-top: 2rem;
 }
 
+/* section 11*/
 .article_11 {
   background-color: var(---beige);
   padding: 1rem;
   color: var(---blue);
-  height: 80vh;
+  height: 210vh;
+}
+
+.article h2 {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.weoffer_container {
+  display: flex;
+  justify-content: center;
+}
+.weoffer_container img {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 150px;
+}
+
+.weoffer_container h2 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.tilbyder {
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .article_11 :last-child {
   text-align: center;
 }
+
+/* section 11*/
 
 .wrapper {
   display: flex;
@@ -486,6 +516,19 @@ svg.redline path {
   .article_11 {
     max-width: 1200px;
     margin: auto;
+  }
+
+  .weoffer_container img,
+  .weoffer_container h2 {
+    height: 250px;
+    padding-top: 50px;
+    line-height: 1.2;
+    font-size: 36px;
+  }
+
+  .weoffer_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .grid_container {
     grid-template-columns: repeat(4, 1fr);

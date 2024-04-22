@@ -7,6 +7,7 @@ import PortraitSection from "../components/PortraitSection.astro";
 import Accordion from "../components/Accordion.astro";
 import CTAButton from "../components/CTAButton.astro";
 import Citat from "../components/Citat.astro";
+import WeOffer from "../components/WeOffer.astro";
 ---
 
 <html lang="en">
@@ -138,16 +139,31 @@ import Citat from "../components/Citat.astro";
           </article>
         </div>
       </ParallaxSection>
-      <ParallaxSection height="80">
+      <ParallaxSection height="210">
         <div class="color2">
           <article class="article_11">
-            <h2>"Det er måske kun én krumme i en medarbejders pung, at købe et nyt stykke tøj, men vores service, kan være én krumme i en virksomheds budget og kan bidrage til meget mere en kun reparation af tøj."</h2>
+           
             <br />
-            <p>"Vi oplever at medarbejderne sætter stor pris på denne gave fra deres arbejdsplads og er med til at de føler sig værdsat af firmaet."</p>
+
+            <img src="" alt="">
+            <p>"For forbrugeren er det en krumme at købe en ny bluse, men for virksomheden er det også en krumme at ansætte os til at komme at hjælpe. 
+
+              Det er bare krumme som har en større betydning"</p>
             <br />
             <p><em>Luna, Designassistent</em></p>
+            <h1 class="tilbyder">Vi tilbyder...</h1>
+            <div class="weoffer_grid">
+            <div class="weoffer_container">
+          <WeOffer titel="Tilpasning" img="../../public/svg/lineal-bukser.svg"/>
+        </div>
+        <div class="weoffer_container">
+          <WeOffer titel="Reperation" img="../../public/svg/sytråd.svg"/>
+        </div>
+        <div class="weoffer_container">
+          <WeOffer titel="Upcycling" img="../../public/svg/broderi3.svg"/>
           </article>
         </div>
+      </div>
       </ParallaxSection>
       <ParallaxSection background="./imgs/taeppe.webp" height="100">
         <div class="wrapper">
