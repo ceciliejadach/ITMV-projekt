@@ -2,7 +2,6 @@
 import ParallaxSection from "../components/ParallaxSection.astro";
 import "../styles/style.css";
 import BlockAnimation from "../components/BlockAnimation.astro";
-import ClothesAnimation from "../components/ClothesAnimation.astro";
 import PortraitSection from "../components/PortraitSection.astro";
 import Accordion from "../components/Accordion.astro";
 import CTAButton from "../components/CTAButton.astro";
@@ -185,7 +184,6 @@ import WeOffer from "../components/WeOffer.astro";
       path.style.strokeDasharray = `${pathLength}`;
       path.style.strokeDashoffset = `${pathLength * (1 - percentage)}`;
     };
-
     scroll();
     window.addEventListener("scroll", scroll);
   </script>
