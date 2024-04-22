@@ -63,21 +63,7 @@ import WeOffer from "../components/WeOffer.astro";
       <ParallaxSection height="100" backgroundColor="#3E5C6D">
         <div class="container">
           <p>Ca. 85% af tekstiler, der købes årligt, ender på lossepladserne.</p>
-          <!-- 
-              <div class="circular">
-                <div class="inner"></div>
-                <div class="number">0%</div>
-                <div class="circle">
-                  <div class="bar left">
-                    <div class="progress"></div>
-                  </div>
-                  <div class="bar right">
-                    <div class="progress"></div>
-                  </div>
-                </div>
-              </div> -->
 
-          <!-- <ClothesAnimation /> -->
           <img src="../../public/svg/losseplads-2.svg" alt="losseplads" />
         </div>
       </ParallaxSection>
@@ -119,12 +105,8 @@ import WeOffer from "../components/WeOffer.astro";
           </div>
         </article>
       </ParallaxSection>
-      <ParallaxSection height="170" backgroundColor="#F0EEEB">
+      <ParallaxSection height="180" backgroundColor="#F0EEEB">
         <article class="article_11">
-          <br />
-          <p><strong>"For forbrugeren er det en krumme at købe en ny bluse, men for virksomheden er det også en krumme at ansætte os til at komme at hjælpe. Det er bare krumme som har en større betydning."</strong></p>
-          <br />
-          <p><em>Luna, Designassistent</em></p>
           <h1 class="tilbyder">Vi tilbyder...</h1>
           <div class="weoffer_grid">
             <div class="weoffer_container">
@@ -137,6 +119,9 @@ import WeOffer from "../components/WeOffer.astro";
               <WeOffer titel="Upcycling" img="../../public/svg/broderi3.svg" />
             </div>
           </div>
+          <p><strong>"For forbrugeren er det en krumme at købe en ny bluse, men for virksomheden er det også en krumme at ansætte os til at komme at hjælpe. Det er bare krumme som har en større betydning."</strong></p>
+          <br />
+          <p><em>Luna, Designassistent</em></p>
         </article>
       </ParallaxSection>
       <ParallaxSection background="./imgs/taeppe.webp" height="100">
@@ -203,16 +188,5 @@ import WeOffer from "../components/WeOffer.astro";
 
     scroll();
     window.addEventListener("scroll", scroll);
-
-    // const numb = document.querySelector(".number");
-    // let counter = 0;
-    // setInterval(() => {
-    //   if (counter == 85) {
-    //     clearInterval();
-    //   } else {
-    //     counter += 1;
-    //     numb.textContent = counter + "%";
-    //   }
-    // }, 75);
   </script>
 </html>

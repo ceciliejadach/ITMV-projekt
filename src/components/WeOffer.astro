@@ -3,8 +3,28 @@ const { name, img, titel } = Astro.props;
 ---
 
 <article>
-
-<img src={img} alt={name} />
-<h2>{titel}</h2>
+  <img src={img} alt={name} />
+  <h2>{titel}</h2>
 </article>
 
+<style>
+  img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 150px;
+  }
+
+  h2 {
+    padding: 30px 0;
+  }
+
+  @media (min-width: 800px) {
+    img,
+    h2 {
+      height: 250px;
+      padding-top: 50px;
+      line-height: 1.2;
+    }
+  }
+</style>
