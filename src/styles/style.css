@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
 }
 
 img {
@@ -56,22 +56,24 @@ p {
   line-height: var(--line-height-p);
 }
 
-/* Desktop størrelse */
+/* Desktop font størrelse */
 @media (min-width: 800px) {
   :root {
     --font-size-h1: 4rem;
-    --font-size-h2: 1.5rem;
-    --font-size-p: 0.8rem;
+    --font-size-h2: 3rem;
+    --font-size-p: 2rem;
   }
 }
 
 /* -----SEKTION 1 - VIDEO----- */
 
+/*styling på container, så tekst kan lægges ovenpå */
 .video_container {
   display: grid;
   place-items: center;
 }
 
+/*styling h1, så den ligger ovenpå videon*/
 .video_headline {
   position: absolute;
   color: var(---blue);
@@ -79,6 +81,7 @@ p {
   z-index: 95;
 }
 
+/*placering af nav med logo indeni*/
 nav {
   position: absolute;
   left: 87%;
@@ -86,6 +89,7 @@ nav {
   z-index: 100;
 }
 
+/*styling af logo*/
 nav img {
   width: 40px;
 }
@@ -142,6 +146,7 @@ nav img {
   padding: 2rem;
 }
 
+/*styling af losseplads illustrationn*/
 .container img {
   width: 250px;
   margin-top: 250px;
@@ -158,21 +163,25 @@ nav img {
   color: var(---blue);
 }
 
+/*styling af symaskine illustration*/
 .article_7 img {
   padding-top: 3rem;
 }
 
+/*styling container som indeholder sky illustrationer*/
 .img_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-top: 2rem;
 }
 
+/*den ene sky skal være større end den anden*/
 .img_container :first-child {
   width: 150px;
   justify-self: end;
 }
 
+/*den anden sky er mindre end den anden*/
 .img_container :last-child {
   justify-self: center;
   align-self: end;
@@ -207,6 +216,8 @@ nav img {
   color: var(---blue);
   height: 100vh;
 }
+
+/*styling af container som indeholder portræt imgs*/
 .grid_container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -214,16 +225,19 @@ nav img {
 }
 
 /* -----SEKTION 11 - REPAIR SERVICE'S YDELSER----- */
+
 .article_11 {
   padding: 2rem;
   color: var(---blue);
   height: 180vh;
 }
 
+/*Luna, Designassistent tekst skal være i midten*/
 .article_11 :last-child {
   text-align: center;
 }
 
+/*styling af vi tilbyder overskrift*/
 .tilbyder {
   text-align: center;
   padding-bottom: 50px;
@@ -231,6 +245,7 @@ nav img {
 
 /* -----SEKTION: HVAD FÅR I UD AF DET?----- */
 
+/*styling af wrapper som omkapsler text*/
 .wrapper {
   display: flex;
   justify-content: center;
@@ -280,6 +295,7 @@ nav img {
 
 /* -----STYLING AF DEN RØDE LINJE SOM LØBER NED AF SIDEN VED SCROLL----- */
 
+/*placering og længde af den røde tråd som snor sig ned*/
 svg.redline {
   position: absolute;
   top: 0;
@@ -289,11 +305,13 @@ svg.redline {
   z-index: 10;
 }
 
+/*styling af den røde tråd*/
 svg.redline path {
   stroke-width: 0.5rem;
   stroke: #e74d3c55;
 }
 
+/*media query som er lavet til symaskine illustration, som skulle have mere en én media query*/
 @media (min-width: 500px) {
   .article_7 img {
     max-width: 400px;
@@ -301,36 +319,34 @@ svg.redline path {
 }
 
 @media (min-width: 800px) {
+  /*den røde tråd skal være kortere ved desktop*/
   svg.redline {
     height: 815vw;
   }
 
+  /*den røde tråd skal være tykkere ved desktop*/
   svg.redline path {
     stroke-width: 1rem;
   }
+
+  /*nav skal rykkes i det skærmen bliver større*/
   nav {
     left: 90%;
     top: 5%;
   }
 
+  /*logoet skal blive større i forbindelse med større skærm*/
   nav img {
     width: 70px;
   }
-
-  h2 {
-    font-size: 3rem;
-  }
-
-  p {
-    font-size: 2rem;
-  }
-
+  /* -----SEKTION 2 - ITMV INTRODUKTION og SEKTION 3 - VIDSTE DU----- */
   .article_2,
   .article_3 {
     max-width: 600px;
     margin: auto;
   }
 
+  /* -----SEKTION 4 - BLOK ANIMATIONER - TEKSTIL FORBRUG----- */
   .article_4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -342,19 +358,20 @@ svg.redline path {
   .article_4 p {
     place-self: center;
   }
+
+  /* -----SEKTION 5 - SKRALDEPOSE ILLUSTRATION----- */
+
   .article_5 {
     max-width: 1200px;
     margin: auto;
   }
+
   .article_5 img {
     max-width: 600px;
     justify-self: center;
   }
 
-  .article_5 p {
-    font-size: 2rem;
-  }
-
+  /* -----SEKTION 6 - LOSSEPLADS----- */
   .container {
     max-width: 1200px;
     margin: auto;
@@ -372,12 +389,14 @@ svg.redline path {
     left: 60%;
   }
 
+  /* -----SEKTION 7 - SYMASKINE ILLUSTRATION----- */
   .article_7 {
     grid-template-columns: 1fr 1fr;
     max-width: 1200px;
     margin: auto;
   }
 
+  /*styling på symaskine illustration*/
   .article_7 img {
     max-width: 500px;
   }
@@ -386,38 +405,32 @@ svg.redline path {
     align-self: center;
   }
 
-  .order {
-    order: 1;
-  }
-
+  /*styling container som indeholder sky illustrationer*/
   .img_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-top: 2rem;
   }
 
-  .img_container :first-child {
-    width: 150px;
-    justify-self: end;
+  /*symaskine illustration skal være i venstre side*/
+  .order {
+    order: 1;
   }
 
-  .img_container :last-child {
-    justify-self: center;
-    align-self: end;
-    width: 80px;
-  }
-
+  /* -----SEKTION 8 - GLOBUS ILLUSTRATION----- */
   .article_8 {
     max-width: 1200px;
     margin: auto;
     gap: 50px;
   }
 
+  /*styling og placering af globus illustration*/
   .article_8 img {
     max-width: 900px;
     justify-self: center;
   }
 
+  /* -----SEKTION 9, 10, 11 - HVAD ER REPAIR SERVICE, REPAIR SERVICE TEAM, VI TILBYDER----- */
   .article_8 p,
   .article_9 p,
   .article_11 p {
@@ -435,15 +448,19 @@ svg.redline path {
     height: 100vh;
   }
 
+  /*styling af container som indeholder tekst og 3 portrætbilleder*/
+  .grid_container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /*styling af grid med repair service illustrationer */
   .weoffer_grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: 150px;
   }
-  .grid_container {
-    grid-template-columns: repeat(4, 1fr);
-  }
 
+  /* -----SEKTION 12 - VI BIDRAGER TIL ESG PROFIL----- */
   .article_12 {
     height: 100vh;
   }
@@ -451,6 +468,7 @@ svg.redline path {
     place-self: center;
   }
 
+  /*styling af wrapper med accordions */
   .accordion_wrapper {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -459,10 +477,12 @@ svg.redline path {
     justify-self: center;
   }
 
+  /* -----SEKTION 13 - HVAD SIGER VORES SAMARBEJDSPARTNERE?----- */
   .article_13 {
     height: 100vh;
   }
 
+  /* -----SEKTION 14 - BLIV EN DEL AF EN LOKAL LØSNING PÅ ET GLOBALT PROBLEM----- */
   .article_14 h1 {
     text-align: center;
     max-width: 800px;
