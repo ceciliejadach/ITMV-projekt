@@ -169,21 +169,31 @@ import WeOffer from "../components/WeOffer.astro";
   </svg>
 
   <script>
+    //Fanger det første SVG-element med klassen "redline"
     const svg = document.querySelector("svg.redline");
+    //Fanger det første path-element inden for det valgte SVG-element
     const path = svg.querySelector("path");
 
+    // Funktionen scroll() beregner, hvor meget brugeren har scrollet i forhold til højden af SVG-elementet.
     const scroll = () => {
+      //Fanger den aktuelle scroll-position i pixels
       const distance = window.scrollY;
 
+      //Beregner den samlede scrollbare distance for SVG-elementet.
       const totalDistance = svg.clientHeight - window.innerHeight;
 
+      //Beregner procentdelen af den samlede scrollbare distance, som brugeren har scrollet.
       const percentage = distance / totalDistance;
 
+      // Fanger den totale længde af path-elementet i SVG.
       const pathLength = path.getTotalLength();
 
+      // ${pathLength};: Indstiller strokeDasharray til den totale længde af path. Dette gør det muligt at vise eller skjule dele af linjen baseret på strokeDashoffset.
       path.style.strokeDasharray = `${pathLength}`;
+      // ${pathLength * (1 - percentage)};: Justerer strokeDashoffset, så det synlige område af linjen ændres i forhold til hvor meget der er scrollet. Når brugeren scroller, vil offset justeres, hvilket får linjen til at tegne sig langs stien.
       path.style.strokeDashoffset = `${pathLength * (1 - percentage)}`;
     };
+    //: Tilføjer en event listener, så scroll()-funktionen kaldes, hver gang brugeren scroller på siden. Dette opdaterer SVG-elementet i realtid, når brugeren scroller.
     scroll();
     window.addEventListener("scroll", scroll);
   </script>
