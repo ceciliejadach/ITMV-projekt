@@ -138,7 +138,7 @@ import Citat from "../components/Citat.astro";
           </article>
         </div>
       </ParallaxSection>
-      <ParallaxSection height="80">
+      <ParallaxSection height="80" backgroundColor="#e00">
         <div class="color2">
           <article class="article_11">
             <h2>"Det er måske kun én krumme i en medarbejders pung, at købe et nyt stykke tøj, men vores service, kan være én krumme i en virksomheds budget og kan bidrage til meget mere en kun reparation af tøj."</h2>
@@ -195,36 +195,36 @@ import Citat from "../components/Citat.astro";
       stroke-width="3"
       stroke-linecap="round"></path>
   </svg>
+
+  <script>
+    const svg = document.querySelector("svg.redline");
+    const path = svg.querySelector("path");
+
+    const scroll = () => {
+      const distance = window.scrollY;
+
+      const totalDistance = svg.clientHeight - window.innerHeight;
+
+      const percentage = distance / totalDistance;
+
+      const pathLength = path.getTotalLength();
+
+      path.style.strokeDasharray = `${pathLength}`;
+      path.style.strokeDashoffset = `${pathLength * (1 - percentage)}`;
+    };
+
+    scroll();
+    window.addEventListener("scroll", scroll);
+
+    // const numb = document.querySelector(".number");
+    // let counter = 0;
+    // setInterval(() => {
+    //   if (counter == 85) {
+    //     clearInterval();
+    //   } else {
+    //     counter += 1;
+    //     numb.textContent = counter + "%";
+    //   }
+    // }, 75);
+  </script>
 </html>
-
-<script>
-  const svg = document.querySelector("svg.redline");
-  const path = svg.querySelector("path");
-
-  const scroll = () => {
-    const distance = window.scrollY;
-
-    const totalDistance = svg.clientHeight - window.innerHeight;
-
-    const percentage = distance / totalDistance;
-
-    const pathLength = path.getTotalLength();
-
-    path.style.strokeDasharray = `${pathLength}`;
-    path.style.strokeDashoffset = `${pathLength * (1 - percentage)}`;
-  };
-
-  scroll();
-  window.addEventListener("scroll", scroll);
-
-  // const numb = document.querySelector(".number");
-  // let counter = 0;
-  // setInterval(() => {
-  //   if (counter == 85) {
-  //     clearInterval();
-  //   } else {
-  //     counter += 1;
-  //     numb.textContent = counter + "%";
-  //   }
-  // }, 75);
-</script>

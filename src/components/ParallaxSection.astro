@@ -1,16 +1,16 @@
 ---
-const { background, height, backgroundColor} = Astro.props;
+const { background, height, backgroundColor } = Astro.props;
 ---
 
 <section>
   <slot />
 </section>
 
-<style define:vars={{ background: `url("${background}")`, height: `${height}vh`, backgroundColor: `${backgroundColor}`}}>
+<style define:vars={{ background: `url("${background}")`, height: `${height}vh`, backgroundColor: `${backgroundColor}` }}>
   section {
     background-image: var(--background);
     background-size: cover;
-    background-color: var(--backgroundColor)
+    background-color: var(--backgroundColor);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
