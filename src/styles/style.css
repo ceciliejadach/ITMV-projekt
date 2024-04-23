@@ -261,6 +261,9 @@ nav img {
 
 /* -----SEKTION 12 - VI BIDRAGER TIL ESG PROFIL----- */
 
+#sek_12 {
+  height: 200vh;
+}
 .article_12 {
   height: 200vh;
   display: grid;
@@ -284,6 +287,10 @@ nav img {
 }
 
 /* -----SEKTION 13 - HVAD SIGER VORES SAMARBEJDSPARTNERE?----- */
+
+#sek_13 {
+  height: 100vh;
+}
 
 .article_13 {
   height: 100vh;
@@ -476,6 +483,9 @@ svg.redline path {
   }
 
   /* -----SEKTION 12 - VI BIDRAGER TIL ESG PROFIL----- */
+  #sek_12 {
+    height: 100vh;
+  }
   .article_12 {
     height: 100vh;
   }
@@ -493,8 +503,12 @@ svg.redline path {
   }
 
   /* -----SEKTION 13 - HVAD SIGER VORES SAMARBEJDSPARTNERE?----- */
+
+  #sek_13 {
+    height: 110vh;
+  }
   .article_13 {
-    height: 80vh;
+    height: 110vh;
   }
 
   /* -----SEKTION 14 - BLIV EN DEL AF EN LOKAL LØSNING PÅ ET GLOBALT PROBLEM----- */
