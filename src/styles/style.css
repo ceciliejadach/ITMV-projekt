@@ -138,8 +138,7 @@ nav img {
 
 /* -----SEKTION 6 - LOSSEPLADS----- */
 
-.container {
-  display: grid;
+.article_6 {
   height: 100vh;
   place-items: center;
   color: var(---beige);
@@ -147,10 +146,43 @@ nav img {
 }
 
 /*styling af losseplads illustrationn*/
-.container img {
+/* .tråd {
+  position: relative;
   width: 250px;
-  margin-left: 80px;
+  height: 200px;
+  top: 50px;
+  left: 100px;
+  z-index: 0;
+} */
+
+.animation_flex {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
+
+#img_tråd {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  top: 145%;
+  left: 30%;
+}
+
+#losseplads {
+  position: absolute;
+  width: 250px;
+  height: 350px;
+  top: 200%;
+  left: 20%;
+}
+
+/* .tekst_animation {
+  color: var(---beige);
+  top: 50px;
+  left: 30px;
+  position: relative;
+} */
 
 /* -----SEKTION 7 - SYMASKINE ILLUSTRATION----- */
 
@@ -328,42 +360,6 @@ svg.redline path {
   stroke: #e74d3c52;
 }
 
-.tråd {
-  position: relative;
-  width: 250px;
-  height: 200px;
-  top: 50px;
-  left: 100px;
-  z-index: 0;
-}
-
-#img_tråd {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-#container_losseplads {
-  position: relative;
-  width: 250px;
-  height: 350px;
-  top: -51%;
-  left: 160px;
-}
-
-#losseplads {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.tekst_animation {
-  color: var(---beige);
-  top: 50px;
-  left: 30px;
-  position: relative;
-}
-
 /*media query som er lavet til symaskine illustration, som skulle have mere en én media query*/
 @media (min-width: 500px) {
   .article_7 img {
@@ -425,21 +421,29 @@ svg.redline path {
   }
 
   /* -----SEKTION 6 - LOSSEPLADS----- */
-  .container {
-    max-width: 1200px;
-    margin: auto;
+  .article_6 {
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    position: relative;
-  }
-  .container div {
-    align-self: center;
-    padding: 5rem;
   }
 
-  .container img {
+  .article_6 :last-child {
+    align-self: start;
+    justify-self: start;
+  }
+
+  #img_tråd {
     position: absolute;
-    top: 20%;
-    left: 60%;
+    width: 150px;
+    height: 100%;
+    top: 100%;
+    left: 45%;
+  }
+
+  #losseplads {
+    position: absolute;
+    width: 300px;
+    top: 150%;
+    left: 50%;
   }
 
   /* -----SEKTION 7 - SYMASKINE ILLUSTRATION----- */
@@ -551,46 +555,5 @@ svg.redline path {
     text-align: center;
     max-width: 800px;
     margin: 100px auto;
-  }
-
-  .ny {
-    position: absolute;
-  }
-
-  .tråd {
-    position: relative;
-    width: 250px;
-    height: 260px;
-    top: 37px;
-    left: 1000px;
-    z-index: 0;
-  }
-
-  #img_tråd {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  #container_losseplads {
-    position: relative;
-    width: 200px;
-    height: 300px;
-    top: -100px;
-    left: 1100px;
-  }
-
-  #losseplads {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-
-  .tekst_animation {
-    color: var(---beige);
-    top: 300px;
-    left: 100px;
-    position: relative;
-    max-width: 600px;
   }
 }

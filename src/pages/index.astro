@@ -7,7 +7,7 @@ import Accordion from "../components/Accordion.astro";
 import CTAButton from "../components/CTAButton.astro";
 import Citat from "../components/Citat.astro";
 import WeOffer from "../components/WeOffer.astro";
-
+import ClothesAnimation from "../components/ClothesAnimation.astro";
 ---
 
 <html lang="en">
@@ -60,19 +60,17 @@ import WeOffer from "../components/WeOffer.astro";
           <p><u>før</u> det når butikshylderne.</p>
         </article>
       </ParallaxSection>
-      <ParallaxSection height="100">
+      <ParallaxSection height="100" backgroundColor="#3E5C6D">
+        <article class="article_6">
           <div>
-            <div class="tekst_animation">
             <p>Ca. 85% af tekstiler, der købes årligt, ender på lossepladserne.</p>
           </div>
-            <ClothesAnimation /> 
-<div class="tråd">
-            <img id="img_tråd"  src="./../public/svg/vector1.svg" alt="tråd">
- </div>
-            
-           <div id="container_losseplads">
+          <div class="animation_flex">
+            <ClothesAnimation />
+            <img id="img_tråd" src="./../public/svg/vector1.svg" alt="tråd" />
             <img id="losseplads" src="../../public/svg/losseplads-2.svg" alt="losseplads" />
           </div>
+        </article>
       </ParallaxSection>
       <ParallaxSection height="100" backgroundColor="#F0EEEB">
         <article class="article_7">
@@ -197,12 +195,13 @@ import WeOffer from "../components/WeOffer.astro";
       // Fanger den totale længde af path-elementet i SVG.
       const pathLength = path.getTotalLength();
 
-    path.style.strokeDasharray = `${pathLength}`;
-    path.style.strokeDashoffset = `${pathLength * (1 - percentage)}`;
-  };
+      path.style.strokeDasharray = `${pathLength}`;
+      path.style.strokeDashoffset = `${pathLength * (1 - percentage)}`;
+    };
 
-  scroll();
-  window.addEventListener("scroll", scroll);
+    scroll();
+    window.addEventListener("scroll", scroll);
 
-  document.querySelector("#clothes_fuld").classList.add("timer");
-</script>
+    document.querySelector("#clothes_fuld").classList.add("timer");
+  </script>
+</html>
