@@ -1,52 +1,94 @@
-<div class="flex_container">
-  <div id="container">
-    <div id="tøj" class="procent"></div>
-    <div id="omdrids"></div>
+
+<div id="animation_container">
+  <div id="clothes_tom">
+    <div id="clothes_fuld"></div>
   </div>
 </div>
 
 <style>
-  #container {
-    position: absolute;
-    width: 100%;
-    aspect-ratio: 3/2;
+#animation_container {
+  position: relative;
+  width: 50%;
+   aspect-ratio: 5/3; 
+   z-index: 1000;
+   left: 40px;
+   top: 52px;
+  
+}
+
+
+#clothes_tom {
+  position: absolute;
+  background-image: url(../../public/svg/group3.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+#clothes_fuld {
+  position: absolute;
+  background-image: url(../../public/svg/trojefarverfinal.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+} 
+
+
+
+
+.timer {
+  animation-name: timer_kf;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes timer_kf {
+  0% {
+    clip-path: inset(100% 0 0);
   }
 
-  #omrids {
-    position: absolute;
-    background-image: url("../../public/svg/shirts_outline.svg");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+  100% {
+    clip-path: inset(0 0 0);
   }
+}
 
-  #tøj {
-    position: absolute;
-    background-image: url("../../public/svg/85_procent.svg");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-  }
 
-  .procent {
-    animation: procent_kf 8s linear forwards infinite;
-  }
 
-  @keyframes procent_kf {
-    0% {
-      clip-path: inset(100% 0 0);
-    }
+@media (min-width: 800px) {
 
-    100% {
-      clip-path: inset(0 0 0);
-    }
-  }
+  #animation_container {
+  position: relative;
+  width: 20%;
+   aspect-ratio: 5/3; 
+   left: 65%;
+   bottom: -60px;
+  
+}
 
-  @media (min-width: 800px) {
-    #container {
-      max-width: 370px;
-      top: 20%;
-      left: 40%;
-    }
-  }
+
+#clothes_tom {
+  position: absolute;
+  background-image: url(../../public/svg/group3.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#clothes_fuld {
+  position: absolute;
+  background-image: url(../../public/svg/trojefarverfinal.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  left: 0;
+} 
+
+
+}
+
+
 </style>

@@ -7,6 +7,7 @@ import Accordion from "../components/Accordion.astro";
 import CTAButton from "../components/CTAButton.astro";
 import Citat from "../components/Citat.astro";
 import WeOffer from "../components/WeOffer.astro";
+
 ---
 
 <html lang="en">
@@ -59,12 +60,19 @@ import WeOffer from "../components/WeOffer.astro";
           <p><u>før</u> det når butikshylderne.</p>
         </article>
       </ParallaxSection>
-      <ParallaxSection height="100" backgroundColor="#3E5C6D">
-        <div class="container">
-          <p>Ca. 85% af tekstiler, der købes årligt, ender på lossepladserne.</p>
-
-          <img src="../../public/svg/losseplads-2.svg" alt="losseplads" />
-        </div>
+      <ParallaxSection height="100">
+          <div>
+            <div class="tekst_animation">
+            <p>Ca. 85% af tekstiler, der købes årligt, ender på lossepladserne.</p>
+          </div>
+            <ClothesAnimation /> 
+<div class="tråd">
+            <img id="img_tråd"  src="./../public/svg/vector1.svg" alt="tråd">
+ </div>
+            
+           <div id="container_losseplads">
+            <img id="losseplads" src="../../public/svg/losseplads-2.svg" alt="losseplads" />
+          </div>
       </ParallaxSection>
       <ParallaxSection height="100" backgroundColor="#F0EEEB">
         <article class="article_7">
@@ -189,13 +197,12 @@ import WeOffer from "../components/WeOffer.astro";
       // Fanger den totale længde af path-elementet i SVG.
       const pathLength = path.getTotalLength();
 
-      // ${pathLength};: Indstiller strokeDasharray til den totale længde af path. Dette gør det muligt at vise eller skjule dele af linjen baseret på strokeDashoffset.
-      path.style.strokeDasharray = `${pathLength}`;
-      // ${pathLength * (1 - percentage)};: Justerer strokeDashoffset, så det synlige område af linjen ændres i forhold til hvor meget der er scrollet. Når brugeren scroller, vil offset justeres, hvilket får linjen til at tegne sig langs stien.
-      path.style.strokeDashoffset = `${pathLength * (1 - percentage)}`;
-    };
-    //: Tilføjer en event listener, så scroll()-funktionen kaldes, hver gang brugeren scroller på siden. Dette opdaterer SVG-elementet i realtid, når brugeren scroller.
-    scroll();
-    window.addEventListener("scroll", scroll);
-  </script>
-</html>
+    path.style.strokeDasharray = `${pathLength}`;
+    path.style.strokeDashoffset = `${pathLength * (1 - percentage)}`;
+  };
+
+  scroll();
+  window.addEventListener("scroll", scroll);
+
+  document.querySelector("#clothes_fuld").classList.add("timer");
+</script>
