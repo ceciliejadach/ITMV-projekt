@@ -200,7 +200,7 @@ nav img {
 /* -----SEKTION 9 - HVAD ER REPAIR SERVICE + FORKLARING AF REPAIR SERVICE----- */
 
 .article_9 {
-  height: 50vh;
+  height: 70vh;
   padding: 2rem;
   color: var(---white);
   text-align: center;
@@ -215,6 +215,10 @@ nav img {
   padding: 2rem;
   color: var(---blue);
   height: 100vh;
+}
+
+.art_10_p {
+  margin-bottom: 50px;
 }
 
 /*styling af container som indeholder portræt imgs*/
@@ -258,13 +262,16 @@ nav img {
 /* -----SEKTION 12 - VI BIDRAGER TIL ESG PROFIL----- */
 
 .article_12 {
-  height: 100vh;
+  height: 200vh;
   display: grid;
   gap: 40px;
   padding: 2rem;
   color: var(---white);
 }
 
+.article_12 h1 {
+  padding-top: 3rem;
+}
 /*styling af wrapper*/
 .accordion_wrapper {
   display: grid;
@@ -284,6 +291,10 @@ nav img {
   padding: 2rem;
   color: var(---white);
   text-align: center;
+}
+
+.article_13 h2 {
+  padding-bottom: 1rem;
 }
 
 /* -----SEKTION 14 - BLIV EN DEL AF EN LOKAL LØSNING PÅ ET GLOBALT PROBLEM----- */
@@ -444,6 +455,10 @@ svg.redline path {
     margin: auto;
   }
 
+  .art_10_p {
+    margin: 100px auto;
+  }
+
   .article_11 {
     height: 100vh;
   }
@@ -479,7 +494,7 @@ svg.redline path {
 
   /* -----SEKTION 13 - HVAD SIGER VORES SAMARBEJDSPARTNERE?----- */
   .article_13 {
-    height: 100vh;
+    height: 80vh;
   }
 
   /* -----SEKTION 14 - BLIV EN DEL AF EN LOKAL LØSNING PÅ ET GLOBALT PROBLEM----- */
