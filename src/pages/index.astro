@@ -8,6 +8,7 @@ import Accordion from "../components/Accordion.astro";
 import CTAButton from "../components/CTAButton.astro";
 import Citat from "../components/Citat.astro";
 import WeOffer from "../components/WeOffer.astro";
+
 ---
 
 <html lang="en">
@@ -65,27 +66,18 @@ import WeOffer from "../components/WeOffer.astro";
         </div>
       </ParallaxSection>
       <ParallaxSection height="100">
-        <div class="color1">
-          <div class="container">
+          <div>
+            <div class="tekst_animation">
             <p>Ca. 85% af tekstiler, der købes årligt, ender på lossepladserne.</p>
-            <!-- 
-              <div class="circular">
-                <div class="inner"></div>
-                <div class="number">0%</div>
-                <div class="circle">
-                  <div class="bar left">
-                    <div class="progress"></div>
-                  </div>
-                  <div class="bar right">
-                    <div class="progress"></div>
-                  </div>
-                </div>
-              </div> -->
-
-            <!-- <ClothesAnimation /> -->
-            <img src="../../public/svg/losseplads-2.svg" alt="losseplads" />
           </div>
-        </div>
+            <ClothesAnimation /> 
+<div class="tråd">
+            <img id="img_tråd"  src="./../public/svg/vector1.svg" alt="tråd">
+ </div>
+            
+           <div id="container_losseplads">
+            <img id="losseplads" src="../../public/svg/losseplads-2.svg" alt="losseplads" />
+          </div>
       </ParallaxSection>
       <ParallaxSection height="100">
         <div class="color2">
@@ -226,14 +218,5 @@ import WeOffer from "../components/WeOffer.astro";
   scroll();
   window.addEventListener("scroll", scroll);
 
-  // const numb = document.querySelector(".number");
-  // let counter = 0;
-  // setInterval(() => {
-  //   if (counter == 85) {
-  //     clearInterval();
-  //   } else {
-  //     counter += 1;
-  //     numb.textContent = counter + "%";
-  //   }
-  // }, 75);
+  document.querySelector("#clothes_fuld").classList.add("timer");
 </script>
