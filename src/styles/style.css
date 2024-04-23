@@ -339,7 +339,7 @@ svg.redline path {
 @media (min-width: 800px) {
   /*den røde tråd skal være kortere ved desktop*/
   svg.redline {
-    height: 815vw;
+    height: 900vw;
   }
 
   /*den røde tråd skal være tykkere ved desktop*/
