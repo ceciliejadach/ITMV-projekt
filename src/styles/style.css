@@ -145,16 +145,7 @@ nav img {
   padding: 2rem;
 }
 
-/*styling af losseplads illustrationn*/
-/* .tråd {
-  position: relative;
-  width: 250px;
-  height: 200px;
-  top: 50px;
-  left: 100px;
-  z-index: 0;
-} */
-
+/*styling af losseplads illustration*/
 .animation_flex {
   display: flex;
   flex-direction: column;
@@ -176,13 +167,6 @@ nav img {
   top: 200%;
   left: 20%;
 }
-
-/* .tekst_animation {
-  color: var(---beige);
-  top: 50px;
-  left: 30px;
-  position: relative;
-} */
 
 /* -----SEKTION 7 - SYMASKINE ILLUSTRATION----- */
 
@@ -231,13 +215,18 @@ nav img {
 /* -----SEKTION 9 - HVAD ER REPAIR SERVICE + FORKLARING AF REPAIR SERVICE----- */
 
 .article_9 {
-  height: 70vh;
+  height: 100vh;
   padding: 2rem;
   color: var(---white);
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.article_9 :last-child {
+  padding-top: 2rem;
 }
 
 /* -----SEKTION 10 - REPAIR SERVICE TEAM PORTRÆTTER ----- */
@@ -350,7 +339,7 @@ svg.redline {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 2560vw;
+  height: 2950vw;
   z-index: 10;
 }
 
@@ -374,7 +363,7 @@ svg.redline path {
 @media (min-width: 800px) {
   /*den røde tråd skal være kortere ved desktop*/
   svg.redline {
-    height: 900vw;
+    height: 870vw;
   }
 
   /*den røde tråd skal være tykkere ved desktop*/
@@ -492,13 +481,21 @@ svg.redline path {
   }
 
   /* -----SEKTION 9, 10, 11 - HVAD ER REPAIR SERVICE, REPAIR SERVICE TEAM, VI TILBYDER----- */
+
+  .article_9 :first-child {
+    padding-top: 3rem;
+  }
+
+  .article_9 :last-child {
+    padding-top: 0;
+  }
+
   .article_8 p,
   .article_9 p,
   .article_11 p {
     max-width: 900px;
     margin: auto;
   }
-
   .article_10,
   .article_11 {
     max-width: 1200px;
