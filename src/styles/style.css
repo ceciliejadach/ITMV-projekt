@@ -355,9 +355,9 @@ svg.redline path {
     max-width: 400px;
   }
 
-  #losseplads {
+  /* #losseplads {
     left: 40%;
-  }
+  } */
 }
 
 @media (min-width: 800px) {
@@ -426,7 +426,7 @@ svg.redline path {
 
   #img_tråd {
     position: absolute;
-    width: 150px;
+    width: 125px;
     height: 100%;
     top: 100%;
     left: 45%;
@@ -436,7 +436,7 @@ svg.redline path {
     position: absolute;
     width: 300px;
     top: 150%;
-    left: 50%;
+    left: 30%;
   }
 
   /* -----SEKTION 7 - SYMASKINE ILLUSTRATION----- */
@@ -556,5 +556,6 @@ svg.redline path {
     text-align: center;
     max-width: 800px;
     margin: 100px auto;
+    line-height: 4rem;
   }
 }
