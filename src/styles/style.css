@@ -419,6 +419,10 @@ svg.redline path {
     grid-template-columns: 1fr 1fr;
   }
 
+  .article_6 p {
+    padding-left: 2rem;
+  }
+
   .article_6 :last-child {
     align-self: start;
     justify-self: start;
